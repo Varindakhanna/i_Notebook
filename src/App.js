@@ -6,6 +6,8 @@ import Alert from "./components/Alert";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoteState from "./Context/notes/NotesState";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
               </Route>
               <Route exact path="/about">
                 <About />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/signup">
+                <Signup />
               </Route>
             </Switch>
           </div>
