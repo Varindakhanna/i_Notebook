@@ -16,11 +16,13 @@ router.post('/createuser',[
     body('password','Enter a password minimum of size 5').isLength({ min: 5 }),
 
 ], async (req,res)=>
+
 {
+  let success=false;
     // If there are errors , return Bad request and the errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({success,errors: errors.array() });
     }
 
     //Check whether the user with this already exists
@@ -31,7 +33,7 @@ router.post('/createuser',[
 
     if(user)
     {
-        return res.status(400).json({errors : "sorry a user already exists"});
+        return res.status(400).json({success,errors : "sorry a user already exists"});
     }
    
 
@@ -61,7 +63,8 @@ router.post('/createuser',[
 
 
      // res.json(user);
-      res.json(authtoken);
+     success=true;
+      res.json({success,authtoken});
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal server error");
