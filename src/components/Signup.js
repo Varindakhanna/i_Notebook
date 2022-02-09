@@ -39,10 +39,12 @@ const Signup = (props) => {
       setCredentials({...credentials , [e.target.name]:e.target.value})
   }
   return (
-    <div>
+    <div className="mt-4">
+      <h2 className="my-2">Create an Account to use iNotebook</h2>
 
       <form onSubmit={handleSubmit}>
       <div class="mb-3">
+        
           <label for="name" class="form-label">
             Name
           </label>

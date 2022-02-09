@@ -40,7 +40,8 @@ const Login = (props) => {
   
   return (
  
-    <div>
+    <div className="mt-5">
+      <h2 className="my-2">Login to continue to iNotebook</h2>
       <form onSubmit={handleSubmit}>
         <div className="my-4" >
           <label htmlFor="email" className="form-label">
@@ -50,14 +51,12 @@ const Login = (props) => {
             type="email"
             name="email"
             className="form-control"
-            id="exampleInputEmail1"
+            id="email"
             value={credentials.email}
             onChange={onChange}
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
-          </div>
+          
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">
@@ -69,11 +68,12 @@ const Login = (props) => {
             className="form-control"
             value={credentials.password}
             onChange={onChange}
-            id="exampleInputPassword1"
+            id="password"
           />
         </div>
 
         <button type="submit" className="btn btn-primary" >
+
           Submit
         </button>
       </form>
