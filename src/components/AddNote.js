@@ -34,6 +34,7 @@ const AddNote = (props) => {
             class="form-control"
             id="title"
             name="title"
+            placeholder="Please enter a Title"
             aria-describedby="emailHelp"
             value={note.title}
             onChange={onChange}
@@ -50,6 +51,7 @@ const AddNote = (props) => {
             class="form-control"
             id="description"
             value={note.description}
+            placeholder="Please enter a Description"
             name="description"
             onChange={onChange}
             minLength={5} required
@@ -65,6 +67,7 @@ const AddNote = (props) => {
             class="form-control"
             id="tag"
             value={note.tag}
+            placeholder="Please enter a Tag"
             name="tag"
             onChange={onChange}
             minLength={5} required

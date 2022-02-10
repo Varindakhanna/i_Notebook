@@ -51,6 +51,7 @@ const Login = (props) => {
             type="email"
             name="email"
             className="form-control"
+            placeholder="Please enter your email address"
             id="email"
             value={credentials.email}
             onChange={onChange}
@@ -65,6 +66,7 @@ const Login = (props) => {
           <input
             type="password"
             name="password"
+            placeholder="Please enter your password"
             className="form-control"
             value={credentials.password}
             onChange={onChange}

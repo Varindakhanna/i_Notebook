@@ -43,14 +43,14 @@ const Signup = (props) => {
       <h2 className="my-2">Create an Account to use iNotebook</h2>
 
       <form onSubmit={handleSubmit}>
-      <div class="mb-3">
-        
+      <div class="mb-3">        
           <label for="name" class="form-label">
             Name
           </label>
           <input
             type="text"
             class="form-control"
+            placeholder="Please enter your name"
             name="name"
             id="name"
             onChange={onChange}
@@ -65,6 +65,7 @@ const Signup = (props) => {
           <input
             type="email"
             class="form-control"
+            placeholder="Please enter your email address"
             id="email"
             name="email"
             onChange={onChange}
@@ -81,6 +82,7 @@ const Signup = (props) => {
             name="password"
             minLength={5} required
             class="form-control"
+            placeholder="Enter your password"
             onChange={onChange}
             id="password"
           />
@@ -93,6 +95,7 @@ const Signup = (props) => {
             type="password"
             class="form-control"
             onChange={onChange}
+            placeholder="Confirm your password"
             id="cpassword"
             name="cpassword"
           />
